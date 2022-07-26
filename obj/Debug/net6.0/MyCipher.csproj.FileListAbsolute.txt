@@ -1,0 +1,15 @@
+C:\Users\Desktop\Documents\git\MyCipher\obj\Debug\net6.0\MyCipher.csproj.AssemblyReference.cache
+C:\Users\Desktop\Documents\git\MyCipher\obj\Debug\net6.0\MyCipher.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Desktop\Documents\git\MyCipher\obj\Debug\net6.0\MyCipher.AssemblyInfoInputs.cache
+C:\Users\Desktop\Documents\git\MyCipher\obj\Debug\net6.0\MyCipher.AssemblyInfo.cs
+C:\Users\Desktop\Documents\git\MyCipher\obj\Debug\net6.0\MyCipher.csproj.CoreCompileInputs.cache
+C:\Users\Desktop\Documents\git\MyCipher\bin\Debug\net6.0\MyCipher.exe
+C:\Users\Desktop\Documents\git\MyCipher\bin\Debug\net6.0\MyCipher.deps.json
+C:\Users\Desktop\Documents\git\MyCipher\bin\Debug\net6.0\MyCipher.runtimeconfig.json
+C:\Users\Desktop\Documents\git\MyCipher\bin\Debug\net6.0\MyCipher.dll
+C:\Users\Desktop\Documents\git\MyCipher\bin\Debug\net6.0\MyCipher.pdb
+C:\Users\Desktop\Documents\git\MyCipher\obj\Debug\net6.0\MyCipher.dll
+C:\Users\Desktop\Documents\git\MyCipher\obj\Debug\net6.0\refint\MyCipher.dll
+C:\Users\Desktop\Documents\git\MyCipher\obj\Debug\net6.0\MyCipher.pdb
+C:\Users\Desktop\Documents\git\MyCipher\obj\Debug\net6.0\MyCipher.genruntimeconfig.cache
+C:\Users\Desktop\Documents\git\MyCipher\obj\Debug\net6.0\ref\MyCipher.dll
