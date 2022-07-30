@@ -8,9 +8,14 @@ namespace MyCipher.Service
 {
     internal class AllChars
     {
+        public List<string> alphabet { get; set; }
+        public List<string> consonants { get; set; }
+        public List<string> vowels { get; set; }
+        public List<string> specialChars { get; set; }
+
         public AllChars()
         {
-            List<string> alphabet = new List<string>();
+            alphabet = new List<string>();
             alphabet.Add("a");
             alphabet.Add("b");
             alphabet.Add("c");
@@ -33,9 +38,9 @@ namespace MyCipher.Service
             alphabet.Add("w");
             alphabet.Add("x");
             alphabet.Add("y");
-            alphabet.Add("z");
+            alphabet.Add("z"); //23 elements, 0-22
 
-            List<string> consonants = new List<string>();
+            consonants = new List<string>();
             consonants.Add("b");
             consonants.Add("c");
             consonants.Add("d");
@@ -52,17 +57,17 @@ namespace MyCipher.Service
             consonants.Add("s");
             consonants.Add("t");
             consonants.Add("w");
-            consonants.Add("z");
+            consonants.Add("z"); //17 elements, 0-16
 
-            List<string> vowels = new List<string>();
+            vowels = new List<string>();
             vowels.Add("a");
             vowels.Add("e");
             vowels.Add("i");
             vowels.Add("o");
             vowels.Add("u");
-            vowels.Add("y");
+            vowels.Add("y"); //6 elements, 0-5
 
-            List<string> specialChars = new List<string>();
+            specialChars = new List<string>();
             specialChars.Add("`");
             specialChars.Add("~");
             specialChars.Add("!");
@@ -94,7 +99,8 @@ namespace MyCipher.Service
             specialChars.Add(".");
             specialChars.Add(">");
             specialChars.Add("/");
-            specialChars.Add("?");
+            specialChars.Add("?"); //32 elements, 0-31
         }
+
     }
 }
