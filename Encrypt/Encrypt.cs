@@ -4,16 +4,28 @@ namespace MyCipher.Encrypt
 {
     internal class Encryption : DrawLetter
     {
-        public string TextToEncryption { get; set; }
-
-        public Encryption()
+        public Encryption() //load all classes to do Cipher
         {
-            TextToEncryption = Console.ReadLine();
+            string temp;
+
+            List<string> Cipher = new List<string>();
+
+            //FIRST STAGE 11111111111111111111111111111111111111111111111111111111111111111111111111111111
+            EncryptFirstStage encryptFirstStage = new EncryptFirstStage(); //number of chars
+            temp = ""+encryptFirstStage.TakeNumberOfChars();
+            Cipher.Add(temp);
+            Cipher.Add(AddLetter());
+            //END FIRST STAGE 1111111111111111111111111111111111111111111111111111111111111111111111111111
         }
 
-        public void FirstStage()
+        public string AddLetter()
         {
-            Console.Write(TextToEncryption);
+            string temp;
+
+            DrawLetter drawLetter = new DrawLetter();
+            temp = drawLetter.DrawLetterFromAToZ();
+
+            return temp;
         }
     }
 }

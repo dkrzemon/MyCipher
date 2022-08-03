@@ -41,64 +41,64 @@ namespace MyCipher.Service
             alphabet.Add("z"); //23 elements, 0-22
 
             consonants = new List<string>();
-            consonants.Add("b");
-            consonants.Add("c");
-            consonants.Add("d");
-            consonants.Add("f");
-            consonants.Add("g");
-            consonants.Add("h");
-            consonants.Add("j");
-            consonants.Add("k");
-            consonants.Add("l");
-            consonants.Add("m");
-            consonants.Add("n");
-            consonants.Add("p");
-            consonants.Add("r");
-            consonants.Add("s");
-            consonants.Add("t");
-            consonants.Add("w");
+            consonants.Add("b"); //1
+            consonants.Add("c"); //2
+            consonants.Add("d"); //3
+            consonants.Add("f"); //4
+            consonants.Add("g"); //5
+            consonants.Add("h"); //6
+            consonants.Add("j"); //7
+            consonants.Add("k"); //8
+            consonants.Add("l"); //9
+            consonants.Add("m"); //10
+            consonants.Add("n"); //11
+            consonants.Add("p"); //12
+            consonants.Add("r"); //13
+            consonants.Add("s"); //14
+            consonants.Add("t"); //15
+            consonants.Add("w"); //16
             consonants.Add("z"); //17 elements, 0-16
 
             vowels = new List<string>();
-            vowels.Add("a");
-            vowels.Add("e");
-            vowels.Add("i");
-            vowels.Add("o");
-            vowels.Add("u");
+            vowels.Add("a"); //1
+            vowels.Add("e"); //2
+            vowels.Add("i"); //3
+            vowels.Add("o"); //4
+            vowels.Add("u"); //5
             vowels.Add("y"); //6 elements, 0-5
 
             specialChars = new List<string>();
-            specialChars.Add("`");
-            specialChars.Add("~");
-            specialChars.Add("!");
-            specialChars.Add("@");
-            specialChars.Add("#");
-            specialChars.Add("$");
-            specialChars.Add("%");
-            specialChars.Add("^");
-            specialChars.Add("&");
-            specialChars.Add("*");
-            specialChars.Add("(");
-            specialChars.Add(")");
-            specialChars.Add("-");
-            specialChars.Add("_");
-            specialChars.Add("=");
-            specialChars.Add("+");
-            specialChars.Add("[");
-            specialChars.Add("{");
-            specialChars.Add("]");
-            specialChars.Add("}");
+            specialChars.Add("`"); //
+            specialChars.Add("~"); //
+            specialChars.Add("!"); //
+            specialChars.Add("@"); //
+            specialChars.Add("#"); //
+            specialChars.Add("$"); //
+            specialChars.Add("%"); //
+            specialChars.Add("^"); //
+            specialChars.Add("&"); //
+            specialChars.Add("*"); //
+            specialChars.Add("("); //
+            specialChars.Add(")"); //
+            specialChars.Add("-"); //
+            specialChars.Add("_"); //
+            specialChars.Add("="); //
+            specialChars.Add("+"); //
+            specialChars.Add("["); //
+            specialChars.Add("{"); //
+            specialChars.Add("]"); //
+            specialChars.Add("}"); //
             specialChars.Add("\u005c"); // this -> /
-            specialChars.Add("|");
-            specialChars.Add(";");
-            specialChars.Add(":");
-            specialChars.Add("'");
+            specialChars.Add("|"); //
+            specialChars.Add(";"); //
+            specialChars.Add(":"); //
+            specialChars.Add("'"); //
             specialChars.Add("\u02ba"); //this -> "
-            specialChars.Add(",");
-            specialChars.Add("<");
-            specialChars.Add(".");
-            specialChars.Add(">");
-            specialChars.Add("/");
+            specialChars.Add(","); //
+            specialChars.Add("<"); //
+            specialChars.Add("."); //
+            specialChars.Add(">"); //
+            specialChars.Add("/"); //
             specialChars.Add("?"); //32 elements, 0-31
         }
 

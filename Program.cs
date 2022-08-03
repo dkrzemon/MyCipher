@@ -8,12 +8,7 @@ namespace MyCipher
     {
         static void Main(string[] args)
         {
-            //Encryption encrypt = new Encryption();
-
-            //encrypt.FirstStage();
-
-            DrawLetter drawLetter = new DrawLetter();
-
+            Encryption encrypt = new Encryption();
         }
     }
 }

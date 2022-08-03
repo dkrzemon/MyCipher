@@ -10,23 +10,17 @@ namespace MyCipher.Service
     {
         public DrawLetter()
         {
-            for (int i = 0; i < 100; i++)
-            {
-                Console.WriteLine(alphabet[DrawNumber()]);
-
-            }
-
-
-
+            //Console.WriteLine(alphabet[DrawNumber()]);
         }
 
-        private int DrawNumber()
+        public string DrawLetterFromAToZ()
         {
             Random generator = new Random();
             int number = generator.Next(23);
-            
 
-            return number;
+            AllChars allChars = new AllChars(); //load all arrays from class AllChars
+
+            return allChars.alphabet[number];
         }
     }
 }
