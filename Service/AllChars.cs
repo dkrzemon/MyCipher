@@ -15,7 +15,7 @@ namespace MyCipher.Service
 
         public AllChars()
         {
-            alphabet = new List<string>();
+            alphabet = new();
             alphabet.Add("a");
             alphabet.Add("b");
             alphabet.Add("c");
@@ -40,7 +40,7 @@ namespace MyCipher.Service
             alphabet.Add("y");
             alphabet.Add("z"); //23 elements, 0-22
 
-            consonants = new List<string>();
+            consonants = new();
             consonants.Add("b"); //1
             consonants.Add("c"); //2
             consonants.Add("d"); //3
@@ -59,7 +59,7 @@ namespace MyCipher.Service
             consonants.Add("w"); //16
             consonants.Add("z"); //17 elements, 0-16
 
-            vowels = new List<string>();
+            vowels = new();
             vowels.Add("a"); //1
             vowels.Add("e"); //2
             vowels.Add("i"); //3
@@ -67,7 +67,7 @@ namespace MyCipher.Service
             vowels.Add("u"); //5
             vowels.Add("y"); //6 elements, 0-5
 
-            specialChars = new List<string>();
+            specialChars = new();
             specialChars.Add("`"); //
             specialChars.Add("~"); //
             specialChars.Add("!"); //
@@ -101,6 +101,5 @@ namespace MyCipher.Service
             specialChars.Add("/"); //
             specialChars.Add("?"); //32 elements, 0-31
         }
-
     }
 }

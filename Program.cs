@@ -8,7 +8,7 @@ namespace MyCipher
     {
         static void Main(string[] args)
         {
-            Encryption encrypt = new Encryption();
+            Encryption encrypt = new();
         }
     }
 }

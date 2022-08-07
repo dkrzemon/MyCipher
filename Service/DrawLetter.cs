@@ -15,10 +15,10 @@ namespace MyCipher.Service
 
         public string DrawLetterFromAToZ()
         {
-            Random generator = new Random();
+            Random generator = new();
             int number = generator.Next(23);
 
-            AllChars allChars = new AllChars(); //load all arrays from class AllChars
+            AllChars allChars = new(); //load all arrays from class AllChars
 
             return allChars.alphabet[number];
         }
