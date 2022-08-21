@@ -6,7 +6,7 @@ namespace MyCipher.Encrypt
     {
         public List<string> ListToEncryption { get; set; }
 
-        public Encryption() //load all classes to do Cipher
+        public Encryption()
         {
             string textToEncryption;
 
@@ -23,14 +23,33 @@ namespace MyCipher.Encrypt
             //ND STAGE 22222222222222222222222222222222222222222222222222222222222222222222222222222222222
             EncryptSecondStage encryptSecondStage = new(); //amount of special chars and take order them
             
+            Cipher.Add("" + encryptSecondStage.AmountOfConsonants(ListToEncryption));
+            Cipher.Add(AddLetter());
+            Cipher.Add("" + encryptSecondStage.AmountOfVowels(ListToEncryption));
+            Cipher.Add(AddLetter());
+            Cipher.Add("" + encryptSecondStage.AmountOfNumbers(ListToEncryption));
+            Cipher.Add(AddLetter());
             Cipher.Add("" + encryptSecondStage.AmountOfSpecialChars(ListToEncryption));
+            Cipher.Add(AddLetter());
+            Cipher.Add("" + encryptSecondStage.AmountOfSpaces(ListToEncryption));
             Cipher.Add(AddLetter());
             //END ND STAGE 2222222222222222222222222222222222222222222222222222222222222222222222222222222
 
-            Console.WriteLine("***");
+            Console.WriteLine("\n\n*******");
             foreach(string key in Cipher)
             {
                 Console.Write(key);
+            }
+
+            //Console.WriteLine("\n\n\n");
+            //List<string> tempe = new();
+            //encryptSecondStage.GetOrderOfConsonants(tempe);
+
+            Console.WriteLine("\n\n\n");
+            Console.WriteLine("XXXXXXXXXXXX");
+            foreach (string t in encryptSecondStage.IndexesOfSpaces)
+            {
+                Console.Write(t + " ");
             }
         }
 
