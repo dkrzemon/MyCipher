@@ -14,7 +14,6 @@ namespace MyCipher.Encrypt
         {
             int amountConsonants = 0;
             IndexesOfConsonants = new(); //TO ORDER OF CONSONANTS
-            //List<string> IndexesOfConsonants = new(); //TO ORDER OF CONSONANTS
 
             AllChars allChars = new();
 
@@ -24,9 +23,9 @@ namespace MyCipher.Encrypt
                 {
                     if (key == consonant)
                     {
-                        IndexesOfConsonants.Add("" + allChars.consonants.IndexOf(consonant));
+                        IndexesOfConsonants.Add("" + allChars.consonants.IndexOf(key));
 
-                        Console.WriteLine("consonant (INDEX) -> " + allChars.consonants.IndexOf(consonant));
+                        //Console.WriteLine("consonant (INDEX) -> " + allChars.consonants.IndexOf(consonant));
                         amountConsonants++;
                     }
                 }
@@ -47,7 +46,8 @@ namespace MyCipher.Encrypt
                 {
                     if (key == vowel)
                     {
-                        IndexesOfVowels.Add("" + allChars.numbers.IndexOf(vowel));
+                        IndexesOfVowels.Add("" + allChars.vowels.IndexOf(key));
+                        //Console.WriteLine("****" + allChars.numbers.IndexOf(vowel) + "****");
                         amountVowels++;
                     }
                 }
@@ -68,7 +68,7 @@ namespace MyCipher.Encrypt
                 {
                     if (key == number)
                     {
-                        IndexesOfNumbers.Add("" + allChars.numbers.IndexOf(number));
+                        IndexesOfNumbers.Add("" + allChars.numbers.IndexOf(key));
                         amountNumbers++;
                     }
                 }
@@ -89,7 +89,7 @@ namespace MyCipher.Encrypt
                 {
                     if (key == specialChar)
                     {
-                        IndexesOfSpecialChars.Add("" + allChars.specialChars.IndexOf(specialChar));
+                        IndexesOfSpecialChars.Add("" + allChars.specialChars.IndexOf(key));
                         amountSpecialChars++;
                     }
                 }

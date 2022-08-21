@@ -20,6 +20,7 @@ namespace MyCipher.Encrypt
             Cipher.Add(AddLetter());
             //END FIRST STAGE 1111111111111111111111111111111111111111111111111111111111111111111111111111
             
+
             //ND STAGE 22222222222222222222222222222222222222222222222222222222222222222222222222222222222
             EncryptSecondStage encryptSecondStage = new(); //amount of special chars and take order them
             
@@ -35,7 +36,20 @@ namespace MyCipher.Encrypt
             Cipher.Add(AddLetter());
             //END ND STAGE 2222222222222222222222222222222222222222222222222222222222222222222222222222222
 
-            Console.WriteLine("\n\n*******");
+
+            //RD STAGE 33333333333333333333333333333333333333333333333333333333333333333333333333333333333
+            EncryptThirdStage encryptThirdStage = new();
+            //Console.WriteLine("****" + encryptSecondStage.IndexesOfConsonants[0] + "****");
+            Cipher = encryptThirdStage.AddOrder(Cipher, encryptSecondStage.IndexesOfConsonants);
+            Cipher = encryptThirdStage.AddOrder(Cipher, encryptSecondStage.IndexesOfVowels);
+            Cipher = encryptThirdStage.AddOrder(Cipher, encryptSecondStage.IndexesOfSpecialChars);
+            Cipher = encryptThirdStage.AddOrder(Cipher, encryptSecondStage.IndexesOfNumbers);
+            Cipher = encryptThirdStage.AddOrder(Cipher, encryptSecondStage.IndexesOfSpaces);
+
+
+            //END RD STAGE 3333333333333333333333333333333333333333333333333333333333333333333333333333333
+
+            Console.WriteLine("\n\n******* CIPHER:");
             foreach(string key in Cipher)
             {
                 Console.Write(key);
@@ -45,12 +59,12 @@ namespace MyCipher.Encrypt
             //List<string> tempe = new();
             //encryptSecondStage.GetOrderOfConsonants(tempe);
 
-            Console.WriteLine("\n\n\n");
-            Console.WriteLine("XXXXXXXXXXXX");
-            foreach (string t in encryptSecondStage.IndexesOfSpaces)
-            {
-                Console.Write(t + " ");
-            }
+            //Console.WriteLine("\n\n\n");
+            //Console.WriteLine("XXXXXXXXXXXX");
+            //foreach (string t in encryptSecondStage.IndexesOfSpaces)
+            //{
+            //    Console.Write(t + " ");
+            //}
         }
 
         public string AddLetter()
