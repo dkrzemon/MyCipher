@@ -24,8 +24,6 @@ namespace MyCipher.Encrypt
                     if (key == consonant)
                     {
                         IndexesOfConsonants.Add("" + allChars.consonants.IndexOf(key));
-
-                        //Console.WriteLine("consonant (INDEX) -> " + allChars.consonants.IndexOf(consonant));
                         amountConsonants++;
                     }
                 }
@@ -47,7 +45,6 @@ namespace MyCipher.Encrypt
                     if (key == vowel)
                     {
                         IndexesOfVowels.Add("" + allChars.vowels.IndexOf(key));
-                        //Console.WriteLine("****" + allChars.numbers.IndexOf(vowel) + "****");
                         amountVowels++;
                     }
                 }
@@ -97,7 +94,6 @@ namespace MyCipher.Encrypt
 
             return amountSpecialChars;
         }
-
         public int AmountOfSpaces(List<string> listToEncryption) //ADDITIONAL FUNCTION -> take index this special chars
         {
             int i = 0;
@@ -117,10 +113,5 @@ namespace MyCipher.Encrypt
 
             return amountOfSpaces;
         }
-
-        //public List<string> GetOrderOfConsonants(List<string> list)
-        //{
-        //    return IndexesOfConsonants;
-        //}
     }
 }

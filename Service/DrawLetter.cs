@@ -8,11 +8,6 @@ namespace MyCipher.Service
 {
     internal class DrawLetter : AllChars
     {
-        public DrawLetter()
-        {
-            //Console.WriteLine(alphabet[DrawNumber()]);
-        }
-
         public string DrawLetterFromAToZ()
         {
             Random generator = new();
