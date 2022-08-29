@@ -1,0 +1,51 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MyCipher.Service
+{
+    internal class EncryptService
+    {
+        public List<string> GetListOfStringsToEncrypt(List<string> list)
+        {
+            string stringToList = Console.ReadLine(); //to check stringToList != null
+            list = new();
+            list.AddRange(stringToList.Select(c => c.ToString())); //ConvertTypeOfTextToEncryptionFromStringToList
+
+            return list;
+        }
+
+        public List<string> AddAmountOfKeyToCipher(IKeysService iKeyService, List<string> cipher)
+        {
+            cipher.Add("" + iKeyService.Amount);
+            cipher.Add(AddLetter());
+
+            return cipher;
+        }
+
+        public List<string> AddIndexesOfKeyToCipher(IKeysService iKeyService, List<string> cipher)
+        {
+            foreach (string key in iKeyService.Indexes)
+            {
+                cipher.Add(key);
+                cipher.Add(AddLetter());
+            }
+
+            return cipher;
+        }
+
+        
+
+        public string AddLetter()
+        {
+            string temp;
+
+            DrawLetter drawLetter = new();
+            temp = drawLetter.DrawLetterFromAToZ();
+
+            return temp;
+        }
+    }
+}

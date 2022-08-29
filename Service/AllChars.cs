@@ -69,16 +69,16 @@ namespace MyCipher.Service
             vowels.Add("y"); //6 elements, 0-5
 
             numbers = new();
-            numbers.Add("0"); //
-            numbers.Add("1"); //
-            numbers.Add("2"); //
-            numbers.Add("3"); //
-            numbers.Add("4"); //
-            numbers.Add("5"); //
-            numbers.Add("6"); //
-            numbers.Add("7"); //
+            numbers.Add("9"); //
             numbers.Add("8"); //
-            numbers.Add("9"); //10 elements, 0-9
+            numbers.Add("7"); //
+            numbers.Add("6"); //
+            numbers.Add("5"); //
+            numbers.Add("4"); //
+            numbers.Add("3"); //
+            numbers.Add("2"); //
+            numbers.Add("1"); //
+            numbers.Add("0"); //10 elements, 0-9
 
             specialChars = new();
             specialChars.Add("`"); //
@@ -101,6 +101,7 @@ namespace MyCipher.Service
             specialChars.Add("{"); //
             specialChars.Add("]"); //
             specialChars.Add("}"); //
+            specialChars.Add(" "); //
             specialChars.Add("\u005c"); // this -> /
             specialChars.Add("|"); //
             specialChars.Add(";"); //
@@ -112,7 +113,7 @@ namespace MyCipher.Service
             specialChars.Add("."); //
             specialChars.Add(">"); //
             specialChars.Add("/"); //
-            specialChars.Add("?"); //32 elements, 0-31
+            specialChars.Add("?"); //33 elements, 0-32
         }
     }
 }

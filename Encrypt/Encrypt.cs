@@ -1,74 +1,57 @@
-﻿using MyCipher.Service;
+﻿using MyCipher.Encrypt.Keys;
+using MyCipher.Service;
 
 namespace MyCipher.Encrypt
 {
-    internal class Encryption : DrawLetter
+    internal class Encryption : EncryptService
     {
-        public List<string> ListToEncryption { get; set; }
-
         public Encryption()
         {
-            string textToEncryption;
-
+            #region LoadData
+            //Variables
             List<string> Cipher = new();
-
-            //FIRST STAGE 11111111111111111111111111111111111111111111111111111111111111111111111111111111
-            textToEncryption = Console.ReadLine();
-            ListToEncryption = ConvertTypeOfTextToEncryptionFromStringToList(textToEncryption);
-
-            Cipher.Add("" + ListToEncryption.Count());
-            Cipher.Add(AddLetter());
-            //END FIRST STAGE 1111111111111111111111111111111111111111111111111111111111111111111111111111
-            
-
-            //ND STAGE 22222222222222222222222222222222222222222222222222222222222222222222222222222222222
-            EncryptSecondStage encryptSecondStage = new(); //amount of special chars and take order them
-            
-            Cipher.Add("" + encryptSecondStage.AmountOfConsonants(ListToEncryption));
-            Cipher.Add(AddLetter());
-            Cipher.Add("" + encryptSecondStage.AmountOfVowels(ListToEncryption));
-            Cipher.Add(AddLetter());
-            Cipher.Add("" + encryptSecondStage.AmountOfNumbers(ListToEncryption));
-            Cipher.Add(AddLetter());
-            Cipher.Add("" + encryptSecondStage.AmountOfSpecialChars(ListToEncryption));
-            Cipher.Add(AddLetter());
-            Cipher.Add("" + encryptSecondStage.AmountOfSpaces(ListToEncryption));
-            Cipher.Add(AddLetter());
-            //END ND STAGE 2222222222222222222222222222222222222222222222222222222222222222222222222222222
+            List<string> ListToEncryption = new();
 
 
-            //RD STAGE 33333333333333333333333333333333333333333333333333333333333333333333333333333333333
-            EncryptThirdStage encryptThirdStage = new();
-            Cipher = encryptThirdStage.AddOrder(Cipher, encryptSecondStage.IndexesOfConsonants);
-            Cipher = encryptThirdStage.AddOrder(Cipher, encryptSecondStage.IndexesOfVowels);
-            Cipher = encryptThirdStage.AddOrder(Cipher, encryptSecondStage.IndexesOfSpecialChars);
-            Cipher = encryptThirdStage.AddOrder(Cipher, encryptSecondStage.IndexesOfNumbers);
-            Cipher = encryptThirdStage.AddOrder(Cipher, encryptSecondStage.IndexesOfSpaces);
-            //END RD STAGE 3333333333333333333333333333333333333333333333333333333333333333333333333333333
+            //Classes of keys
+            Consonants consonant = new();
+            Vowels vowel = new();
+            Numbers number = new();
+            SpecialChars specialChar = new();
 
-            Console.WriteLine("\n\n******* CIPHER:");
+            //Service to creating crypt
+            KeysService keysService = new();
+            AllChars allChars = new AllChars();
+            #endregion LoadData
+
+            ListToEncryption = GetListOfStringsToEncrypt(ListToEncryption);
+
+            #region SetIndexesAndAmountOfKeys
+            keysService.SetIndexesAndAmount(consonant, allChars.consonants, ListToEncryption);
+            keysService.SetIndexesAndAmount(vowel, allChars.vowels, ListToEncryption);
+            keysService.SetIndexesAndAmount(number, allChars.numbers, ListToEncryption);
+            keysService.SetIndexesAndAmount(specialChar, allChars.specialChars, ListToEncryption);
+            #endregion
+
+            #region CreatingCipher
+            Cipher = AddAmountOfKeyToCipher(consonant, Cipher);
+            Cipher = AddAmountOfKeyToCipher(vowel, Cipher);
+            Cipher = AddAmountOfKeyToCipher(number, Cipher);
+            Cipher = AddAmountOfKeyToCipher(specialChar, Cipher);
+
+            Cipher = AddIndexesOfKeyToCipher(consonant, Cipher);
+            Cipher = AddIndexesOfKeyToCipher(vowel, Cipher);
+            Cipher = AddIndexesOfKeyToCipher(number, Cipher);
+            Cipher = AddIndexesOfKeyToCipher(specialChar, Cipher);
+            #endregion
+
+            #region ShowCrypt
+            Console.WriteLine("\n\n******* CIPHER:"); //SHOW CIPHER
             foreach (string key in Cipher)
             {
                 Console.Write(key);
             }
-        }
-
-        public string AddLetter()
-        {
-            string temp;
-
-            DrawLetter drawLetter = new();
-            temp = drawLetter.DrawLetterFromAToZ();
-
-            return temp;
-        }
-
-        public List<string> ConvertTypeOfTextToEncryptionFromStringToList(string stringToList)
-        {
-            ListToEncryption = new();
-            ListToEncryption.AddRange(stringToList.Select(c => c.ToString()));
-
-            return ListToEncryption;
+        #endregion
         }
     }
 }
