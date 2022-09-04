@@ -36,7 +36,14 @@ namespace MyCipher.Service
             return cipher;
         }
 
-        
+        public void EncryptEnded(List<string> cipher)
+        {
+            Console.WriteLine("\n\n******* CIPHER:"); //SHOW CIPHER
+            foreach (string key in cipher)
+            {
+                Console.Write(key);
+            }
+        }
 
         public string AddLetter()
         {
