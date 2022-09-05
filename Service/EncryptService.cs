@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MyCipher.Service
+﻿namespace MyCipher.Service
 {
     internal class EncryptService
     {
@@ -39,10 +33,8 @@ namespace MyCipher.Service
         public void EncryptEnded(List<string> cipher)
         {
             Console.WriteLine("\n\n******* CIPHER:"); //SHOW CIPHER
-            foreach (string key in cipher)
-            {
-                Console.Write(key);
-            }
+
+            foreach (string key in cipher) Console.Write(key);
         }
 
         public string AddLetter()

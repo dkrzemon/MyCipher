@@ -10,6 +10,7 @@ namespace MyCipher.Encrypt
             //Variables
             List<string> Cipher = new();
             List<string> ListToEncryption = new();
+            //
 
             //Keys
             Keys consonant = new();
@@ -25,7 +26,6 @@ namespace MyCipher.Encrypt
             };
 
             AllChars allChars = new();
-
             List<List<string>> listChars = new()
             {
                 allChars.consonants,
@@ -33,10 +33,11 @@ namespace MyCipher.Encrypt
                 allChars.numbers,
                 allChars.specialChars
             };
+            //
 
             //Service
             KeysService keysService = new();
-            
+            //
             #endregion LoadData
 
             ListToEncryption = GetListOfStringsToEncrypt(ListToEncryption);

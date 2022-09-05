@@ -1,21 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MyCipher.Service
+﻿namespace MyCipher.Service
 {
-    internal class DrawLetter : AllChars
+    internal class DrawLetter
     {
         public string DrawLetterFromAToZ()
         {
-            Random generator = new();
-            int number = generator.Next(23);
-
             AllChars allChars = new(); //load all arrays from class AllChars
+            Random generator = new();
 
-            return allChars.alphabet[number];
+            int number = generator.Next(23);
+            string letterToReturn;
+
+            letterToReturn = allChars.alphabet[number];
+
+            if (number % 2 == 0) letterToReturn = letterToReturn.ToUpper();
+
+            return letterToReturn;
         }
     }
 }

@@ -19,50 +19,5 @@
                 }
             }
         }
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //public int GetIndexAndAmountOfIndividualKey(IEncryptService IndividualKey, List<string> listToEncryption)
-    //{
-    //    Indexes = IndividualKey.Indexes;
-    //    Amount = IndividualKey.Amount;
-
-    //    Amount = 0;
-    //    Indexes = new(); //TO ORDER OF CONSONANTS
-
-    //    AllChars allChars = new();
-
-    //    foreach (string key in listToEncryption)
-    //    {
-    //        foreach (string consonant in allChars.consonants)
-    //        {
-    //            if (key == consonant)
-    //            {
-    //                Indexes.Add("" + allChars.consonants.IndexOf(key));
-    //                Amount++;
-    //            }
-    //        }
-    //    }
-
-    //    return Amount;
-    //}
-
-
 }
