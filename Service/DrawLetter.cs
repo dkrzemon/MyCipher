@@ -12,7 +12,7 @@
 
             letterToReturn = allChars.alphabet[number];
 
-            if (number % 2 == 0) letterToReturn = letterToReturn.ToUpper();
+            if (number % 2 == 0) letterToReturn = letterToReturn.ToLower();
 
             return letterToReturn;
         }

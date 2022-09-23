@@ -45,7 +45,7 @@ namespace MyCipher.Encrypt
             #region SetIndexesAndAmountOfKeys
             for(var i=0; i<4; i++)
             {
-                keysService.SetIndexesAndAmount(listKeys[i], listChars[i], ListToEncryption);
+                keysService.SetIndexesAndAmount(listKeys[i], allChars.alphabet, listChars[i], ListToEncryption);
             }
             #endregion
 
@@ -56,7 +56,7 @@ namespace MyCipher.Encrypt
             }
             #endregion
 
-            EncryptEnded(Cipher);
+            ShowCipher(Cipher);
         }
     }
 }

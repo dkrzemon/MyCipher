@@ -24,13 +24,14 @@
             foreach (string key in iKeyService.Indexes)
             {
                 cipher.Add(key);
+
                 cipher.Add(AddLetter());
             }
 
             return cipher;
         }
 
-        public void EncryptEnded(List<string> cipher)
+        public void ShowCipher(List<string> cipher)
         {
             Console.WriteLine("\n\n******* CIPHER:"); //SHOW CIPHER
 

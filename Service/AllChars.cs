@@ -11,29 +11,30 @@
         public AllChars()
         {
             alphabet = new();
-            alphabet.Add("a");
-            alphabet.Add("b");
-            alphabet.Add("c");
-            alphabet.Add("d");
-            alphabet.Add("e");
-            alphabet.Add("f");
-            alphabet.Add("g");
-            alphabet.Add("h");
-            alphabet.Add("i");
-            alphabet.Add("j");
-            alphabet.Add("k");
-            alphabet.Add("l");
-            alphabet.Add("m");
-            alphabet.Add("n");
-            alphabet.Add("o");
-            alphabet.Add("p");
-            alphabet.Add("r");
-            alphabet.Add("s");
-            alphabet.Add("t");
-            alphabet.Add("w");
-            alphabet.Add("x");
-            alphabet.Add("y");
-            alphabet.Add("z"); //23 elements, 0-22
+            alphabet.Add("A");
+            alphabet.Add("B");
+            alphabet.Add("C");
+            alphabet.Add("D");
+            alphabet.Add("E");
+            alphabet.Add("F");
+            alphabet.Add("G");
+            alphabet.Add("H");
+            alphabet.Add("I");
+            alphabet.Add("J");
+            alphabet.Add("K");
+            alphabet.Add("L");
+            alphabet.Add("M");
+            alphabet.Add("N");
+            alphabet.Add("O");
+            alphabet.Add("P");
+            alphabet.Add("R");
+            alphabet.Add("S");
+            alphabet.Add("T");
+            alphabet.Add("U");
+            alphabet.Add("W");
+            alphabet.Add("X");
+            alphabet.Add("Y");
+            alphabet.Add("Z"); //24 elements, 0-23
 
             consonants = new();
             consonants.Add("b"); //1
