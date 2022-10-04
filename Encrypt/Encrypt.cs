@@ -54,6 +54,8 @@ namespace MyCipher.Encrypt
             {
                 Cipher = (i<4) ? AddAmountOfKeyToCipher(listKeys[i], Cipher) : Cipher = AddIndexesOfKeyToCipher(listKeys[i - 4], Cipher);
             }
+
+            AddOrderOfKeysToCipher(ListToEncryption, listChars, Cipher);
             #endregion
 
             ShowCipher(Cipher);
