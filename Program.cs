@@ -1,6 +1,6 @@
 ﻿using System;
-using MyCipher.Encrypt;
-using MyCipher.Service;
+using MyCipher.Decrypt;
+using MyCipher.Main;
 
 namespace MyCipher
 {
@@ -8,7 +8,8 @@ namespace MyCipher
     {
         static void Main(string[] args)
         {
-            Encryption encrypt = new();
+            MainMenu mainMenu = new();
+            //Decryption decryption = new();
         }
     }
 }

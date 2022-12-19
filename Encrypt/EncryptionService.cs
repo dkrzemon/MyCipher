@@ -1,16 +1,10 @@
-﻿namespace MyCipher.Service
+﻿using MyCipher.Keys;
+using MyCipher.Common;
+
+namespace MyCipher.Encrypt
 {
-    internal class EncryptService
+    internal class EncryptionService : CryptService
     {
-        public List<string> GetListOfStringsToEncrypt(List<string> list)
-        {
-            string stringToList = Console.ReadLine(); //to check stringToList != null
-            list = new();
-            list.AddRange(stringToList.Select(c => c.ToString())); //convert type of TextToEncryption from string to list
-
-            return list;
-        }
-
         public List<string> AddAmountOfKeyToCipher(IKeysService iKeyService, List<string> cipher)
         {
             cipher.Add("" + iKeyService.Amount);
@@ -37,30 +31,30 @@
 
             string stringTemp;
 
-            for(int i = 0; i<listToEncryption.Count; i++) //loop of main text to encryption
+            for (int i = 0; i < listToEncryption.Count; i++) //loop of main text to encryption
             {
                 stringTemp = listToEncryption[i].ToString();
 
-                for(int j = 0; j < listChars.Count; j++) //loop of 4 arrays from listChars
+                for (int j = 0; j < listChars.Count; j++) //loop of 4 arrays from listChars
                 {
-                    for(int k=0; k < listChars[j].Count; k++) //loop of each one array from ListChars
+                    for (int k = 0; k < listChars[j].Count; k++) //loop of each one array from ListChars
                     {
                         if (stringTemp.ToLower() == listChars[j][k].ToString())
                         {
                             switch (j)
                             {
                                 case 0: //consonant
-                                    if(Char.IsLower(stringTemp, 0))
+                                    if (char.IsLower(stringTemp, 0))
                                     {
                                         listTemp.Add(DrawNumber("consonant"));
-                                    } else
+                                    }
+                                    else
                                     {
                                         listTemp.Add(DrawNumber("consonantBig"));
                                     }
-
                                     break;
                                 case 1: //vowel
-                                    if (Char.IsLower(stringTemp, 0))
+                                    if (char.IsLower(stringTemp, 0))
                                     {
                                         listTemp.Add(DrawNumber("vowel"));
                                     }
@@ -84,11 +78,10 @@
                 }
             }
 
-
             Console.WriteLine();
-            foreach(int temp in listTemp)
+            foreach (int temp in listTemp)
             {
-                cipher.Add(temp+"");
+                cipher.Add(temp + "");
                 cipher.Add(AddLetter());
             }
 
@@ -97,8 +90,10 @@
 
         public void ShowCipher(List<string> cipher)
         {
-            Console.WriteLine("\n\n******* CIPHER:"); //SHOW CIPHER
+            changeTextColor("red");
+            Console.WriteLine("CIPHER:"); //SHOW CIPHER
 
+            changeTextColor("darkRed");
             foreach (string key in cipher) Console.Write(key);
         }
 
@@ -112,19 +107,19 @@
             return temp;
         }
 
-        public int DrawNumber(string whichOne)
+        public int DrawNumber(string typeOfKey)
         {
             Random generator = new();
 
             int numberToReturn = 0;
 
-            switch (whichOne)
+            switch (typeOfKey)
             {
                 case "consonant":
-                    numberToReturn = generator.Next(0,3);
+                    numberToReturn = generator.Next(0, 3);
                     break;
                 case "consonantBig":
-                    numberToReturn = generator.Next(3,6);
+                    numberToReturn = generator.Next(3, 6);
                     break;
                 case "vowel":
                     numberToReturn = generator.Next(6, 9);

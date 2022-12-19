@@ -1,24 +1,25 @@
-﻿using MyCipher.Service;
+﻿using MyCipher.Keys;
+using MyCipher.Common;
 
 namespace MyCipher.Encrypt
 {
-    internal class Encryption : EncryptService
+    internal class Encryption : EncryptionService
     {
         public Encryption()
         {
-            #region LoadData
-            //Variables
+            #region Load_data
+            //Basic variables
             List<string> Cipher = new();
             List<string> ListToEncryption = new();
             //
 
             //Keys
-            Keys consonant = new();
-            Keys vowel = new();
-            Keys number = new();
-            Keys specialChar = new();
+            Key consonant = new();
+            Key vowel = new();
+            Key number = new();
+            Key specialChar = new();
 
-            List<Keys> listKeys = new(){
+            List<Key> listKeys = new(){
                 consonant,
                 vowel,
                 number,
@@ -38,25 +39,21 @@ namespace MyCipher.Encrypt
             //Service
             KeysService keysService = new();
             //
-            #endregion LoadData
+            #endregion load_data
 
-            ListToEncryption = GetListOfStringsToEncrypt(ListToEncryption);
+            ListToEncryption = GetListOfStringsToEncryptDecrypt(ListToEncryption);
 
-            #region SetIndexesAndAmountOfKeys
             for(var i=0; i<4; i++)
             {
                 keysService.SetIndexesAndAmount(listKeys[i], allChars.alphabet, listChars[i], ListToEncryption);
             }
-            #endregion
 
-            #region CreatingCipher
             for (var i = 0; i < 8; i++)
             {
                 Cipher = (i<4) ? AddAmountOfKeyToCipher(listKeys[i], Cipher) : Cipher = AddIndexesOfKeyToCipher(listKeys[i - 4], Cipher);
             }
 
             AddOrderOfKeysToCipher(ListToEncryption, listChars, Cipher);
-            #endregion
 
             ShowCipher(Cipher);
         }

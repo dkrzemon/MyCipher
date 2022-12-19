@@ -1,0 +1,5 @@
+C:\Users\Dawid\Desktop\Nowy folder\MyCipher.exe
+C:\Users\Dawid\Desktop\Nowy folder\MyCipher.dll
+C:\Users\Dawid\Desktop\Nowy folder\MyCipher.deps.json
+C:\Users\Dawid\Desktop\Nowy folder\MyCipher.runtimeconfig.json
+C:\Users\Dawid\Desktop\Nowy folder\MyCipher.pdb

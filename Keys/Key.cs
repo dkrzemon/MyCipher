@@ -1,6 +1,6 @@
-﻿namespace MyCipher.Service
+﻿namespace MyCipher.Keys
 {
-    public interface IKeysService
+    public class Key : IKeysService
     {
         public List<string> Indexes { get; set; }
         public int Amount { get; set; }

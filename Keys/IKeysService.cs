@@ -1,8 +1,6 @@
-﻿using MyCipher.Service;
-
-namespace MyCipher.Encrypt
+﻿namespace MyCipher.Keys
 {
-    internal class Keys : IKeysService
+    public interface IKeysService
     {
         public List<string> Indexes { get; set; }
         public int Amount { get; set; }

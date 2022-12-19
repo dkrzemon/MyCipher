@@ -1,4 +1,4 @@
-﻿namespace MyCipher.Service
+﻿namespace MyCipher.Common
 {
     internal class DrawLetter
     {
