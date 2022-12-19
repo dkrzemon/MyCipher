@@ -1,5 +1,0 @@
-C:\Users\Dawid\Documents\2. PROGRAMMING\1. GIT\MyCipher\bin\Release\net6.0\publish\MyCipher.exe
-C:\Users\Dawid\Documents\2. PROGRAMMING\1. GIT\MyCipher\bin\Release\net6.0\publish\MyCipher.dll
-C:\Users\Dawid\Documents\2. PROGRAMMING\1. GIT\MyCipher\bin\Release\net6.0\publish\MyCipher.deps.json
-C:\Users\Dawid\Documents\2. PROGRAMMING\1. GIT\MyCipher\bin\Release\net6.0\publish\MyCipher.runtimeconfig.json
-C:\Users\Dawid\Documents\2. PROGRAMMING\1. GIT\MyCipher\bin\Release\net6.0\publish\MyCipher.pdb
