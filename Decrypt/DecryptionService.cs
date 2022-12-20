@@ -141,5 +141,14 @@ namespace MyCipher.Decrypt
 
             return EncryptedKey;
         }
-    }
+
+		public void ShowCipher(List<string> cipher)
+		{
+			changeTextColor("red");
+			Console.WriteLine("\n\nCIPHER:"); //SHOW CIPHER
+
+			changeTextColor("darkRed");
+			foreach (string key in cipher) Console.Write(key);
+		}
+	}
 }

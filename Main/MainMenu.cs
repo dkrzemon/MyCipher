@@ -54,20 +54,15 @@ namespace MyCipher.Main
 
         private void BackToMenu()
         {
-
             Console.WriteLine("\n\n");
             changeTextColor("darkYellow");
             Console.WriteLine("WHAT NEXT");
             Console.WriteLine("*********");
             changeTextColor("yellow");
             Console.WriteLine("1. Back to menu");
-            Console.Write("2.");
-            changeTextColor("red");
-            Console.Write(" EXIT");
 
             changeTextColor("yellow");
             Console.Write("\n\nYOUR CHOICE: ");
-
             char choice = Console.ReadKey().KeyChar;
             changeTextColor("white");
 
@@ -80,8 +75,6 @@ namespace MyCipher.Main
             {
                 case '1':
                     break;
-                case '2':
-                    return;
                 default:
                     Console.Clear();
                     break;

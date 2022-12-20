@@ -41,29 +41,20 @@ namespace MyCipher.Decrypt
 
             ListToDecryption = GetKeys(Cipher);
 
-            #region Set_Data_of_class_"Key"
-            //Setting "Amount"
             for (int i = 0; i < ListKeys.Count; i++)
             {
                 ListToDecryption = SetAmount(ListKeys[i], ListToDecryption);
             }
 
-            //Setting "Indexes"
             for (int i = 0; i < ListKeys.Count; i++)
             {
                 ListToDecryption = SetIndexes(ListKeys[i], ListToDecryption);
             }
-            //
-            #endregion set_data_of_class_"Key"
 
-            #region Get_order
             for (int i = 0; i < ListToDecryption.Count; i++)
             {
                 OrderOfKeys.Add(CheckTypeOfKey(ListToDecryption[i]));
             }
-            #endregion get_order
-
-            #region Set_cipher
 
             Cipher.Clear();
             string temp; //as OrderOfKeys[x] in normal string (thank to switch, which dont want accept List<string>[x])
@@ -95,20 +86,7 @@ namespace MyCipher.Decrypt
                 }
             }
 
-            #endregion set_cipher
-
-            #region Show_progress
-
-            Console.WriteLine("\n");
-            Console.WriteLine("\n");
-            foreach (string key in Cipher)
-            {
-                Console.WriteLine(key);
-            }
-            Console.WriteLine("\n");
-            Console.WriteLine("\n");
-
-            #endregion show_progress
-        }
+			ShowCipher(Cipher);
+		}
     }
 }

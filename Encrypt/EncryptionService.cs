@@ -88,15 +88,6 @@ namespace MyCipher.Encrypt
             return cipher;
         }
 
-        public void ShowCipher(List<string> cipher)
-        {
-            changeTextColor("red");
-            Console.WriteLine("CIPHER:"); //SHOW CIPHER
-
-            changeTextColor("darkRed");
-            foreach (string key in cipher) Console.Write(key);
-        }
-
         public string AddLetter()
         {
             string temp;
@@ -137,5 +128,14 @@ namespace MyCipher.Encrypt
 
             return numberToReturn;
         }
-    }
+
+		public void ShowCipher(List<string> cipher)
+		{
+			changeTextColor("red");
+			Console.WriteLine("CIPHER:"); //SHOW CIPHER
+
+			changeTextColor("darkRed");
+			foreach (string key in cipher) Console.Write(key);
+		}
+	}
 }
